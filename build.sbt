@@ -1,6 +1,8 @@
 name := "validators"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
+
+crossScalaVersions := Seq("2.10.6", "2.11.8")
 
 libraryDependencies ++= Seq(
   "org.scalaz" %% "scalaz-core" % "7.2.3" % "test",
@@ -9,6 +11,8 @@ libraryDependencies ++= Seq(
 
 scalacOptions ++= Seq(
   "-feature",
+  "-deprecation",
+  "-unchecked",
   "-language:implicitConversions",
   "-language:higherKinds",
   "-language:existentials",
