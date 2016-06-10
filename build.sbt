@@ -1,0 +1,18 @@
+name := "validators"
+
+scalaVersion := "2.11.7"
+
+libraryDependencies ++= Seq(
+  "org.scalaz" %% "scalaz-core" % "7.2.3" % "test",
+  "org.specs2" %% "specs2-core" % "3.8.3" % "test"
+)
+
+scalacOptions ++= Seq(
+  "-feature",
+  "-language:implicitConversions",
+  "-language:higherKinds",
+  "-language:existentials",
+  "-language:postfixOps"
+)
+
+scalacOptions in Test ++= Seq("-Yrangepos")
